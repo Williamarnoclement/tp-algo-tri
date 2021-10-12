@@ -193,8 +193,18 @@ Tracez le graphique correspondant.
 
 Quel semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ?
 
+Question bonus : Y a-t-il des tailles de tableaux pour lesquelles le tri par fusion n'est pas aussi rapide que les précédents tris abordés ?
+
 ### 4. sort()
 
 Bien que tout cela soit fascinant, Python possède sa propre méthode de tri : `sort()`.
 
 Une dernière fois, analysez le temps d'exécution et découvrez si python fait mieux que nos implémentations rudimentaires ;)
+
+## Pour rendre ce TP
+
+Merci de faire une Pull Request vers ce repository.
+
+Le nom de la PR doit contenir votre nom et celui de votre collègue si vous êtes en binôme.
+
+Vérifiez que votre code est conforme aux normes pep8 et aux autres critères de qualité dont nous avons parlé.

@@ -13,7 +13,7 @@ Nous aborderons par ce TP la notion de complexité algorithmique, c'est à dire 
 Nous travaillerons sur un tableau de nombres, par exemple :
 
 ```
-arrray: list[int] = [2, 34, -4, 2, 8, 1]
+array: list[int] = [2, 34, -4, 2, 8, 1]
 ```
 
 Notez que les entiers pourraient être remplacés par des nombres décimaux, des chaînes de caractère (à trier par ordre alphabétique) ou même des objets complexes (à trier selon une certaine clé de l'objet). Le fonctionnement est le même.
@@ -43,6 +43,8 @@ print("Temps écoulé :", end - start)
 
 #### Exercice préliminaire : temps de génération d'un tableau
 
+Créez un fichier `range.py`.
+
 Mesurez combien de temps prend python à générer un tableau composés de nombres allant de 0 à 100 et contenant :
 
 - 1 000 000 entrées
@@ -51,7 +53,7 @@ Mesurez combien de temps prend python à générer un tableau composés de nombr
 - ...
 - 10 000 000 entrées
 
-**Astuce** : vous pouvez écrire les nombres avec des underscores pour mieux les lire : 1_000_000
+**Astuce** : vous pouvez écrire les nombres avec des underscores pour mieux les lire : `1_000_000`
 
 Sur un tableur, générez un tableau permettant de visualiser le temps d'éxécution en fonction de la taille de l'entrée.
 
@@ -68,3 +70,34 @@ Observez bien les différentes courbes du graphique ci-dessous. Quelle est la pl
 - Un algorithme de complexité O(n²) a un temps d'éxécution qui est proportionnel au carré de la taille du problème à résoudre. Autrement dit, multiplier la taille de l'entrée par 10 multipliera le temps d'éxécution par 100 ! Ce n'est pas terrible du tout...
 
 ## Les algorithmes
+
+### 1. Tri par insertion
+
+Créez un fichier `insertion.py`.
+
+Observez attentivement l'animation de tri par insertion ci-dessous pour en comprendre le fonctionnement.
+
+<img src="insertion.gif">
+
+Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ?
+
+Puis implémentez l'algorithme en python. Vérifiez son bon fonctionnement avec différentes entreés.
+
+Mesurez le temps d'éxécution pour un tableau de :
+
+- 1000 entrées
+- 2000 entrées
+- ...
+- 10000 entrées
+
+Tracez le graphique correspondant.
+
+Quel semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ?
+
+### 2. Tri par sélection
+
+### 3. Tri par fusion
+
+### 4. Quicksort
+
+### 5. sort()

@@ -61,7 +61,7 @@ Comment vous semble évoluer la courbe ?
 
 Observez bien les différentes courbes du graphique ci-dessous. Quelle est la plus ressemblante à notre situation ?
 
-<img src="o.png" width="400">
+<img src="o.webp" width="400">
 
 #### Quelques exemples de complexités courante :
 

@@ -96,8 +96,105 @@ Quel semble être la complexité de notre fonction de tri ? Cela est-il logique 
 
 ### 2. Tri par sélection
 
+Créez un fichier `selection.py`.
+
+Observez attentivement l'animation de tri par insertion ci-dessous pour en comprendre le fonctionnement.
+
+<img src="selection.gif">
+
+Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ?
+
+Puis implémentez l'algorithme en python. Vérifiez son bon fonctionnement avec différentes entreés.
+
+Mesurez le temps d'éxécution pour un tableau de :
+
+- 1000 entrées
+- 2000 entrées
+- ...
+- 10000 entrées
+
+Tracez le graphique correspondant.
+
+Quel semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ?
+
 ### 3. Tri par fusion
 
-### 4. Quicksort
+Le tri par fusion est plus complexe : il utilise en effet la récursion, c'est à dire une fonction qui s'appelle elle-même.
 
-### 5. sort()
+Exemple :
+
+```py
+def loop_forever():
+    loop_forever()
+```
+
+L'appel de cette fonction va entraîner une boucle infinie, car il n'y a pas de condition qui stoppe la boucle.
+
+Voici une fonction récursive avec une "condition" pour la récursion.
+
+```py
+def increment_until_10(i):
+    if i < 10:
+        return increment_until_10(i + 1)
+    else:
+        return i
+```
+
+Si on appelle `increment_until_10(1)`, la fonction sera appelée 9 fois supplémentaires pour "compter" jusqu'à 10.
+
+#### Exercice préliminaire : récursion
+
+Créez un fichier `recursion.py`.
+
+Utiliser le concept de la récursion pour écrire une fonction `factorial` qui calcule la factorielle du nombre passé en paramètre.
+
+Pour rappel, la factorielle de 5 est 5 x 4 x 3 x 2 x 1 = 120
+
+Indice : la factorielle de 5 est donc égale à 5 multipliée par la factorielle de 4...
+
+#### Implémentation du tri par fusion
+
+Observez bien le schéma suivant : il représente le concept du tri par fusion.
+
+<img src="fusion.png">
+
+Cet algorithme est de type "diviser pour régner".
+
+Au début de la procédure, on divise le tableau en deux parties. Pour chaque tableau résultat, s'il est encore divisible, on continue, jusqu'à n'avoir que des "tableaux" à un élément.
+
+À ce stade, la récursion a atteint sa "profondeur" maximale.
+
+On va ensuite fusionner les tableaux uns à uns.
+
+À chaque fois, on compare le premier élément de chaque tableau, et ajoute le plus petit des deux dans un nouveau tableau.
+
+Par exemple, pour les tableaux [27, 38] et [3, 43] :
+
+- on compare 27 et 3 : 3 est le plus petit, notre tableau est donc [3]
+- on compare 27 et 43 : 27 est le plus petit, notre tableau est donc [3, 27]
+- on compare 38 et 43 : 38 est le plus petit, notre tableau est donc [3, 27, 38]
+- il reste 43, ce qui donne : [3, 27, 38, 43]
+
+Creéz un fichier `fusion.py` et implémentez le tri par fusion.
+
+Il vous faudra deux fonctions :
+
+- `sort`, la fonction principale, qui sera chargée de diviser les tableaux ayant plus d'un élément, et de rappeler `sort` avec ces nouveaux tableaux
+- `merge`, la fonction qui sera appelée pour fusionner deux tableaux
+
+Mesurez le temps d'éxécution pour un tableau de :
+
+- 1000 entrées
+- 2000 entrées
+- ...
+- 10000 entrées
+
+Tracez le graphique correspondant.
+
+Quel semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ?
+
+### 4. sort()
+
+Bien que tout cela soit fascinant, Python possède sa propre méthode de tri : `sort()`.
+
+Une dernière fois, analysez le temps d'exécution et découvrez si python fait mieux que nos implémentations rudimentaires ;)

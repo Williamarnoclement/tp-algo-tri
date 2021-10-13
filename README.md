@@ -71,13 +71,13 @@ Observez bien les différentes courbes du graphique ci-dessous. Quelle est la pl
 
 ## Les algorithmes
 
-### 1. Tri par insertion
+### 1. Tri par sélection
 
-Créez un fichier `insertion.py`.
+Créez un fichier `selection.py`.
 
 Observez attentivement l'animation de tri par insertion ci-dessous pour en comprendre le fonctionnement.
 
-<img src="insertion.gif">
+<img src="selection.gif">
 
 Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ?
 
@@ -94,13 +94,13 @@ Tracez le graphique correspondant.
 
 Quel semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ?
 
-### 2. Tri par sélection
+### 2s. Tri par insertion
 
-Créez un fichier `selection.py`.
+Créez un fichier `insertion.py`.
 
 Observez attentivement l'animation de tri par insertion ci-dessous pour en comprendre le fonctionnement.
 
-<img src="selection.gif">
+<img src="insertion.gif">
 
 Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ?
 

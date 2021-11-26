@@ -28,9 +28,8 @@ def permutate_in_array(l: list[int], a: int , b: int)-> list[int]:
 #Insertion sorting algorithm
 def sort(array: list[int]) -> list[int]:
     for j in range(0,len(array)):
-        while(j > 0):
-            if(array[j-1]> array[j]):
-                array = permutate_in_array(array, j, j-1)
+        while(j > 0 and array[j-1]<= array[j]):
+            array = permutate_in_array(array, j, j-1)
             j=j-1
     return array
 

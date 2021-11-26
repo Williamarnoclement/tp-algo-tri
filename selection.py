@@ -31,7 +31,8 @@ def sort(array: list[int]) -> list[int]:
         min: int = i
         for j in range(i+1+1, len(array)):
             if(array[j] < array[min]):
-                array = permutate_in_array(array, j, min)
+                min = j
+        array = permutate_in_array(array, i, min)
     return array
 
 #Get execution time of algorithm
@@ -43,6 +44,9 @@ def get_execution_time(array: list[int]) -> float:
 
 
 arrays : list[list[int]] = []
+
+print(sort(generate_array(1_000)))
+
 
 #Generation of i * 1 000 arrays
 for i in range(1, 11):
